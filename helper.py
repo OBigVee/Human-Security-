@@ -75,19 +75,10 @@ def view_classify(img, ps, version="MNIST"):
     ax2.barh(np.arange(10), ps)
     ax2.set_aspect(0.1)
     ax2.set_yticks(np.arange(10))
-    if version == "MNIST":
+    if version == "Po":
         ax2.set_yticklabels(np.arange(10))
-    elif version == "Fashion":
-        ax2.set_yticklabels(['T-shirt/top',
-                            'Trouser',
-                            'Pullover',
-                            'Dress',
-                            'Coat',
-                            'Sandal',
-                            'Shirt',
-                            'Sneaker',
-                            'Bag',
-                            'Ankle Boot'], size='small');
+    elif version == "Mpol":
+        ax2.set_yticklabels(['T-shirt/top', 'Ankle Boot'], size='small');
     ax2.set_title('Class Probability')
     ax2.set_xlim(0, 1.1)
 
